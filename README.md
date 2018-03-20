@@ -71,9 +71,8 @@ git clone repo_of_this_template
 在项目目录下运行`./gradlew test`出现`BUILD SUCCESSFUL`字样后，将个人练习代码库地址提交到指定的位置。
 
 ## 学习资源
-
 1. [Java 基础](http://www.runoob.com/java/java-tutorial.html)
 2. [Junit](http://junit.org/junit5/docs/current/user-guide/#writing-tests-assertions)
 3. [Mockito](http://site.mockito.org/)
 4. [从一个小例子学习TDD](http://icodeit.org/2014/11/tdd-step-by-step/)
-5. [Git 参考手册](http://gitref.org/zh/index.html)
+
