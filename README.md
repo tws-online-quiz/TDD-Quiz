@@ -76,4 +76,3 @@ git clone repo_of_this_template
 2. [Junit](http://junit.org/junit5/docs/current/user-guide/#writing-tests-assertions)
 3. [Mockito](http://site.mockito.org/)
 4. [从一个小例子学习TDD](http://icodeit.org/2014/11/tdd-step-by-step/)
-5. [Git 参考手册](http://gitref.org/zh/index.html)
