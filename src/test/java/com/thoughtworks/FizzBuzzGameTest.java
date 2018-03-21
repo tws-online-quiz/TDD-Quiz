@@ -14,87 +14,77 @@ public class FizzBuzzGameTest {
         game = new FizzBuzzGame();
     }
 
-    @Test
-    public void test_IsMultiplesOf3_using_a_number_which_is_Not_multiple_of_3() {
-        boolean isMultipleOf3 = game.isMultiplesOf3(4);
-        assertThat(isMultipleOf3, is(false));
 
-        isMultipleOf3 = game.isMultiplesOf3(8);
-        assertThat(isMultipleOf3, is(false));
+    @Test
+    public void test_SayNumber_say_original_input_when_not_matched_with_any_rules() {
+        assertThat(game.sayNumber(11), is("11"));
+        assertThat(game.sayNumber(17), is("17"));
+        assertThat(game.sayNumber(19), is("19"));
+        assertThat(game.sayNumber(97), is("97"));
+
     }
 
-    @Test
-    public void test_IsMultiplesOf3_using_a_number_which_is_multiple_of_3() {
-        boolean isMultipleOf3 = game.isMultiplesOf3(6);
-        assertThat(isMultipleOf3, is(true));
-
-        isMultipleOf3 = game.isMultiplesOf3(99);
-        assertThat(isMultipleOf3, is(true));
-    }
 
     @Test
-    public void test_IsMultiplesOf5_using_a_number_which_is_Not_multiple_of_5() {
-        boolean isMultipleOf5 = game.isMultiplesOf5(4);
-        assertThat(isMultipleOf5, is(false));
-
-        isMultipleOf5 = game.isMultiplesOf5(8);
-        assertThat(isMultipleOf5, is(false));
-    }
-
-    @Test
-    public void test_IsMultiplesOf5_using_a_number_which_is_multiple_of_5() {
-        boolean isMultipleOf5 = game.isMultiplesOf5(10);
-        assertThat(isMultipleOf5, is(true));
-
-        isMultipleOf5 = game.isMultiplesOf5(15);
-        assertThat(isMultipleOf5, is(true));
-    }
-
-    @Test
-    public void test_SayNumber_say_original_number_when_number_is_not_multiple_of_3_or_5() {
-        String word = game.sayNumber(2);
-        assertThat(word, is("2"));
-
-        word = game.sayNumber(4);
-        assertThat(word, is("4"));
-
-        word = game.sayNumber(43);
-        assertThat(word, is("43"));
+    public void test_SayNumber_say_Fizz_when_number_contains_3() {
+        assertThat(game.sayNumber(3), is("Fizz"));
+        assertThat(game.sayNumber(13), is("Fizz"));
+        assertThat(game.sayNumber(23), is("Fizz"));
+        assertThat(game.sayNumber(43), is("Fizz"));
+        assertThat(game.sayNumber(30), is("Fizz"));
+        assertThat(game.sayNumber(31), is("Fizz"));
+        assertThat(game.sayNumber(32), is("Fizz"));
+        assertThat(game.sayNumber(33), is("Fizz"));
+        assertThat(game.sayNumber(34), is("Fizz"));
+        assertThat(game.sayNumber(35), is("Fizz"));
+        assertThat(game.sayNumber(36), is("Fizz"));
+        assertThat(game.sayNumber(37), is("Fizz"));
+        assertThat(game.sayNumber(38), is("Fizz"));
+        assertThat(game.sayNumber(39), is("Fizz"));
     }
 
     @Test
     public void test_SayNumber_say_Fizz_when_number_is_multiple_of_3() {
-        String word = game.sayNumber(3);
-        assertThat(word, is("Fizz"));
-
-        word = game.sayNumber(6);
-        assertThat(word, is("Fizz"));
-
-        word = game.sayNumber(99);
-        assertThat(word, is("Fizz"));
+        assertThat(game.sayNumber(3), is("Fizz"));
+        assertThat(game.sayNumber(6), is("Fizz"));
+        assertThat(game.sayNumber(99), is("Fizz"));
     }
 
     @Test
     public void test_SayNumber_say_Buzz_when_number_is_multiple_of_5() {
-        String word = game.sayNumber(5);
-        assertThat(word, is("Buzz"));
+        assertThat(game.sayNumber(5), is("Buzz"));
+        assertThat(game.sayNumber(100), is("Buzz"));
 
-        word = game.sayNumber(10);
-        assertThat(word, is("Buzz"));
+    }
 
-        word = game.sayNumber(95);
-        assertThat(word, is("Buzz"));
+    @Test
+    public void test_SayNumber_say_Whizz_when_number_is_multiple_of_7() {
+        assertThat(game.sayNumber(7), is("Whizz"));
+        assertThat(game.sayNumber(49), is("Whizz"));
+        assertThat(game.sayNumber(77), is("Whizz"));
     }
 
     @Test
     public void test_SayNumber_say_FizzBuzz_when_number_is_multiple_of_3_and_5() {
-        String word = game.sayNumber(15);
-        assertThat(word, is("FizzBuzz"));
+        assertThat(game.sayNumber(15), is("FizzBuzz"));
+        assertThat(game.sayNumber(45), is("FizzBuzz"));
+        assertThat(game.sayNumber(90), is("FizzBuzz"));
+    }
 
-        word = game.sayNumber(30);
-        assertThat(word, is("FizzBuzz"));
+    @Test
+    public void test_SayNumber_say_BuzzWhizz_when_number_is_multiple_of_5_and_7() {
+        assertThat(game.sayNumber(70), is("BuzzWhizz"));
+    }
 
-        word = game.sayNumber(90);
-        assertThat(word, is("FizzBuzz"));
+    @Test
+    public void test_SayNumber_say_FizzWhizz_when_number_is_multiple_of_3_and_7() {
+        assertThat(game.sayNumber(21), is("FizzWhizz"));
+        assertThat(game.sayNumber(42), is("FizzWhizz"));
+        assertThat(game.sayNumber(84), is("FizzWhizz"));
+    }
+
+    @Test
+    public void test_SayNumber_say_FizzBuzzWhizz_when_number_is_multiple_of_3_and5_and_7() {
+        assertThat(game.sayNumber(105), is("FizzBuzzWhizz"));
     }
 }

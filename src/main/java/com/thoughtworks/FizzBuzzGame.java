@@ -14,29 +14,29 @@ public class FizzBuzzGame {
     }
 
     String sayNumber(int number) {
-        boolean isMultiplesOf3 = isMultiplesOf3(number);
-        boolean isMultiplesOf5 = isMultiplesOf5(number);
-        if (isMultiplesOf3 && isMultiplesOf5) {
-            return "FizzBuzz";
-        }
-
-        if (isMultiplesOf3) {
+        String word = "";
+        String num = String.valueOf(number);
+        if (num.contains("3")) {
             return "Fizz";
         }
-
-        if (isMultiplesOf5) {
-            return "Buzz";
+        word += threeMultiple(number) + fiveMultiple(number) + sevenMultiple(number);
+        if (word.equals("")) {
+            return num;
         }
-
-        return String.valueOf(number);
+        return word;
     }
 
-    boolean isMultiplesOf3(int number) {
-        return number % 3 == 0;
+
+    public String threeMultiple(int i) {
+        return i % 3 == 0 ? "Fizz" : "";
     }
 
-    boolean isMultiplesOf5(int number) {
-        return number % 5 == 0;
+    public String fiveMultiple(int i) {
+        return i % 5 == 0 ? "Buzz" : "";
+    }
+
+    public String sevenMultiple(int i) {
+        return i % 7 == 0 ? "Whizz" : "";
     }
 
     public List<String> getResults() {
