@@ -1,4 +1,4 @@
-# TDD基础
+# TDD FizzBuzzWhizz
 
 ## 练习描述
 
@@ -12,11 +12,11 @@
 4. 学生报数时，如果所报数字同时是两个特殊数的倍数情况下，也要特殊处理，比如第一个特殊数和第二个特殊数的倍数，那么不能说该数字，而是要说FizzBuzz, 以此类推。如果同时是三个特殊数的倍数，那么要说FizzBuzzWhizz。
 5. 学生报数时，如果所报数字包含了第一个特殊数，那么也不能说该数字，而是要说相应的单词，比如本例中第一个特殊数是3，那么要报13的同学应该说Fizz。如果数字中包含了第一个特殊数，那么忽略规则3和规则4，比如要报35的同学只报Fizz，不报BuzzWhizz。
  
-现在，我们需要你完成一个程序来模拟这个游戏，它首先接受3个特殊数，然后输出100名学生应该报数的数或单词。比如，
- 
-输入
+现在，我们需要你完成一个程序来模拟这个游戏，它首先接受学生个数，然后输出这些学生应该报数的数或单词，假定三个特殊数是：3，5，7
+
+输入学生个数：
 ```
-3,5,7
+100
 ```
 
 输出（片段）
@@ -71,7 +71,6 @@ git clone repo_of_this_template
 在项目目录下运行`./gradlew test`出现`BUILD SUCCESSFUL`字样后，将个人练习代码库地址提交到指定的位置。
 
 ## 学习资源
-
 1. [Java 基础](http://www.runoob.com/java/java-tutorial.html)
 2. [Junit](http://junit.org/junit5/docs/current/user-guide/#writing-tests-assertions)
 3. [Mockito](http://site.mockito.org/)
