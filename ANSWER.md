@@ -1,7 +1,14 @@
 # TDD
 
 ### 如何下载
-+ 答案详情请点击上方 作业答案下载，来下载 answer.zip 压缩包文件 
++ 答案详情请点击上方 作业答案下载，来下载 `answer.zip` 压缩包文件 
+
+### 如何启动
++ 解压 `answer.zip`，用 IntelliJ IDE 打开
++ 运行测试
+    
+    根目录下执行`./gradlew clean test`
+
 
 ### 重点讲解
 + 仔细阅读题目的README.md,来确定都有哪些条件以及优先级
