@@ -45,7 +45,8 @@ Buzz
 一直到100
 ```
 
-以TDD的方式进行开发，要保证项目提供的集成测试通过，同时自己添加的测试也要通过。
+要求：
+- 以TDD的方式进行开发，要保证项目提供的集成测试通过，同时自己添加的测试也要通过。
 
 ## 环境要求
 
@@ -55,23 +56,13 @@ Buzz
 
 ## 如何开始
 
-- 在命令行中使用以下命令在用户本地任意目录下clone此题目库
-```
-git clone repo_of_this_template
-```
-- 运行所有测试：克隆下来代码后，我们使用`cd`命令进入到项目目录下，运行下面的命令
-```
-./gradlew test
-```
-- 此时所有测试都是失败的
+- 克隆模版库
+- 在 `main`下的`FizzBuzzGame`中完成实现，在`test`下的`FizzBuzzGameTest`中完成测试
+- 根目录下执行`./gradlew clean test`，此时所有测试都是失败的
 - 开始按照题目要求完成练习
 
+## 如何测试
+- 根目录下执行`./gradlew clean test`，查看测试结果
+
 ## 输出规范
-
-在项目目录下运行`./gradlew test`出现`BUILD SUCCESSFUL`字样后，将个人练习代码库地址提交到指定的位置。
-
-## 学习资源
-1. [Java 基础](http://www.runoob.com/java/java-tutorial.html)
-2. [Junit](http://junit.org/junit5/docs/current/user-guide/#writing-tests-assertions)
-3. [Mockito](http://site.mockito.org/)
-4. [从一个小例子学习TDD](http://icodeit.org/2014/11/tdd-step-by-step/)
+- 完成需求的代码及测试
